@@ -23,13 +23,5 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        ans = nums.copy()
-        i = 0
-        for x in range(len(nums)):
-            ans[i] = nums[nums[x]]
-            i += 1
-
-        print(ans)
-        return ans
-            
-Solution.buildArray(Solution, [5,0,1,2,3,4])
+        return [nums[nums[x]] for x in range(len(nums))]
+print(Solution.buildArray(Solution, [5,0,1,2,3,4]))
